@@ -1,6 +1,6 @@
-# Performance comparison: styled-components vs pure component
+# Performance comparison: styled-components vs pure jsx
 
-This repo compared how long styled-components and pure component take time to render 10,000 divs.
+This repo compared how long styled-components and pure jsx take time to render 10,000 divs.
 
 ## Precondition
 
@@ -25,11 +25,11 @@ This repo compared how long styled-components and pure component take time to re
 
 compared scripting time to render 10,000 divs:
 
-|         | styled-components | Pure component |
-| ------- | ----------------- | -------------- |
-| 1st     | 520ms             | 297ms          |
-| 2nd     | 378ms             | 266ms          |
-| 3rd     | 421ms             | 260ms          |
-| 4th     | 424ms             | 235ms          |
-| 5th     | 413ms             | 246ms          |
-| average | 431.2ms           | 260.8ms        |
+|         | styled-components | pure jsx |
+| ------- | ----------------- | -------- |
+| 1st     | 520ms             | 297ms    |
+| 2nd     | 378ms             | 266ms    |
+| 3rd     | 421ms             | 260ms    |
+| 4th     | 424ms             | 235ms    |
+| 5th     | 413ms             | 246ms    |
+| average | 431.2ms           | 260.8ms  |

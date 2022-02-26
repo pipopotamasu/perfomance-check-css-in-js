@@ -12,7 +12,7 @@ function StyledComponent() {
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // @ts-ignore
-function PureComponent() {
+function PureJsxComponent() {
   const divs = [...Array(COMPONENTS_COUNT)].map((_, i) => <div key={i}>{i + 1}</div>);
   return <>{divs}</>;
 }
