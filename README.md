@@ -1,50 +1,35 @@
-# react-vite
+# Performance comparison: styled-components vs pure component
 
-React app boilerplate based on vite.
+This repo compared how long styled-components and pure component take time to render 10,000 divs.
 
-## Features
+## Precondition
 
-- Vite with React, TypeScript and absolute path
-- Styled by Tailwind CSS v3
-- Use ESLint, Prettier
-- Test by Jest
-- Setup github actoins(CI) which makes test, lint, type check run
+### Machine
 
-## Getting started
+- MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+- 2.5 GHz Dual-Core Intel Core i7
+- 16 GB 2133 MHz LPDDR3
+- macOS Monterey v12.2
 
-use degit to clone to your machine with an empty git history:
+### Browser
 
-```console
-$ npx degit pipopotamasu/react-vite#main my-app
-$ cd my-app
-$ yarn install
-$ yarn dev
-=> http://localhost:3000
-```
+- Google Chrome v98
+- CPU: 4x slowdown
 
-## Development
+### Libraries
 
-```console
-$ yarn dev            # start dev server at http://localhost:3000
-$ yarn test           # run test by jest
-$ yarn eslint         # run eslint for ts files
-$ yarn eslint:fix     # run eslint with autofix mode
-$ yarn prettier:write # format files
-$ yarn prettier:check # check if files are formatable
-$ yarn fix            # run eslint with autofix mode and prettier
-```
+- react v17.0.2(production build)
+- styled-components v5.3.3
 
-## Production
+## Result
 
-```console
-$ yarn build    # build static files for production
-$ yarn serve    # preview production built files
-```
+compared scripting time to render 10,000 divs:
 
-## Credit
-
-react-vite is built and maintained by [pipopotamasu](https://twitter.com/pipopotamasu3).
-
-## License
-
-This project is licensed under the terms of the [MIT license](https://github.com/pipopotamasu/react-vite/blob/main/LICENSE).
+|         | styled-components | Pure component |
+| ------- | ----------------- | -------------- |
+| 1st     | 520ms             | 297ms          |
+| 2nd     | 378ms             | 266ms          |
+| 3rd     | 421ms             | 260ms          |
+| 4th     | 424ms             | 235ms          |
+| 5th     | 413ms             | 246ms          |
+| average | 431.2ms           | 260.8ms        |
