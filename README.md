@@ -1,6 +1,6 @@
 # Performance comparison: styled-components vs pure component
 
-This repo compared how long styled-components and pure component take time to render div 10,000 times.
+This repo compared how long styled-components and pure component take time to render 10,000 divs.
 
 ## Precondition
 
@@ -19,15 +19,17 @@ This repo compared how long styled-components and pure component take time to re
 ### Libraries
 
 - react v17.0.2(production build)
-- styled-components v5.5.5
+- styled-components v5.3.3
 
 ## Result
 
+compared scripting time to render 10,000 divs:
+
 |         | styled-components | Pure component |
 | ------- | ----------------- | -------------- |
-| 1st     | 0s                | 0s             |
-| 2nd     | 0s                | 0s             |
-| 3rd     | 0s                | 0s             |
-| 4th     | 0s                | 0s             |
-| 5th     | 0s                | 0s             |
-| average | 0s                | 0s             |
+| 1st     | 520ms             | 297ms          |
+| 2nd     | 378ms             | 266ms          |
+| 3rd     | 421ms             | 260ms          |
+| 4th     | 424ms             | 235ms          |
+| 5th     | 413ms             | 246ms          |
+| average | 431.2ms           | 260.8ms        |
