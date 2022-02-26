@@ -2,7 +2,6 @@ module.exports = {
   env: {
     browser: true,
     es2020: true,
-    'jest/globals': true,
   },
   globals: {
     process: true,
@@ -12,11 +11,10 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier',
   ],
-  plugins: ['react', 'jest', '@typescript-eslint', 'react-hooks', 'jsx-a11y'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'jsx-a11y'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json',
@@ -40,16 +38,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'jest/consistent-test-it': [
-      'error',
-      {
-        fn: 'it',
-        withinDescribe: 'it',
-      },
-    ],
-    'jest/expect-expect': 'off',
-    'jest/require-top-level-describe': 'error',
-    'jest/no-disabled-tests': 'off',
     'no-console': 'error',
   },
 };
